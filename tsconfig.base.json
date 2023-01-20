@@ -20,7 +20,10 @@
       }
     ],
     "paths": {
-      "@demo/shared": ["tools/demo/index.ts"]
+      "@demo/shared": ["tools/demo/index.ts"],
+      "@dieover/*": ["packages/*"],
+      "@dieover/jail-breaker": ["packages/jail-breaker/index.d.ts"],
+      "@dieover/jail-breaker/angular": ["packages/jail-breaker/angular/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

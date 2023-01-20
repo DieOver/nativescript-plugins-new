@@ -55,12 +55,19 @@ module.exports = {
       },
     },
     '⚙️': {
-      script: `npx cowsay "@nativescript/* packages will keep your ⚙️ cranking"`,
-      description: '_____________  @nativescript/*  _____________',
+      script: `npx cowsay "@dieover/* packages will keep your ⚙️ cranking"`,
+      description: '_____________  @dieover/*  _____________',
     },
     // packages
     // build output is always in dist/packages
-    '@nativescript': {
+    '@dieover': {
+      // @dieover/jail-breaker
+      'jail-breaker': {
+        build: {
+          script: 'nx run jail-breaker:build.all',
+          description: '@dieover/jail-breaker: Build',
+        },
+      },
       'build-all': {
         script: 'nx run-many --target=build.all --all',
         description: 'Build all packages',
@@ -71,8 +78,12 @@ module.exports = {
       description: '_____________  Focus (VS Code supported)  _____________',
     },
     focus: {
+      'jail-breaker': {
+        script: 'nx run jail-breaker:focus',
+        description: 'Focus on @dieover/jail-breaker',
+      },
       reset: {
-        script: 'nx g @nativescript/plugin-tools:focus-packages',
+        script: 'nx g @dieover/plugin-tools:focus-packages',
         description: 'Reset Focus',
       },
     },
